@@ -1,0 +1,72 @@
+{
+    "title": "SB Admin",
+    "name": "startbootstrap-sb-admin",
+    "version": "6.0.2",
+    "scripts": {
+        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+        "build:assets": "node scripts/build-assets.js",
+        "build:pug": "node scripts/build-pug.js",
+        "build:scripts": "node scripts/build-scripts.js",
+        "build:scss": "node scripts/build-scss.js",
+        "clean": "node scripts/clean.js",
+        "start": "npm run build && node scripts/start.js",
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "description": "A free admin dashboard template based on Bootstrap 4, created by Start Bootstrap.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template",
+        "admin",
+        "app",
+        "dashboard"
+    ],
+    "homepage": "https://startbootstrap.com/template/sb-admin",
+    "bugs": {
+        "url": "https://github.com/StartBootstrap/startbootstrap-sb-admin/issues",
+        "email": "feedback@startbootstrap.com"
+    },
+    "license": "MIT",
+    "author": "Start Bootstrap",
+    "contributors": [
+        "David Miller (https://davidmiller.io/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/StartBootstrap/startbootstrap-sb-admin.git"
+    },
+    "dependencies": {
+        "bootstrap": "4.5.3",
+        "npm": "^6.14.9",
+        "package_name": "^1.0.2",
+        "uninstall": "0.0.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "10.0.1",
+        "browser-sync": "2.26.13",
+        "chokidar": "3.4.3",
+        "concurrently": "5.3.0",
+        "postcss": "8.1.4",
+        "prettier": "2.1.2",
+        "pug": "3.0.0",
+        "sass": "1.28.0",
+        "shelljs": "0.8.4",
+        "upath": "2.0.0",
+        "axios": "^0.19",
+        "cross-env": "^7.0",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.19",
+        "resolve-url-loader": "^3.1.0",
+        "vue-template-compiler": "^2.6.12"
+    }
+}
